@@ -16,7 +16,7 @@ export const ButtonGroup = () => {
   const [medias, setMedias] = useState<SocialMedia[]>([]);
 
   useEffect(() => {
-    fetch("/social_medias.json")
+    fetch(`${import.meta.env.BASE_URL}social_medias.json`)
       .then(response => response.json())
       .then(data => {
         setMedias(data);
